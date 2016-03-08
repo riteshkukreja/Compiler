@@ -1,0 +1,28 @@
+body, html {margin: 0;}
+body {background: #666; width: 100vw; overflow: hidden;}
+header {width:100vw; height: 30px; background-color: #444; color: #0A3; font-family: arial; font-size:28px; padding: 20px;}
+h2 { margin: 0; }
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+	position: absolute;
+	right: 50px;
+	top: 20px;
+    font-size: .7em;
+    padding: 10px 10px;
+    font-weight: 700;
+    color: white;
+    background-color: #F63333;
+    display: inline-block;
+}
+
+.inputfile:focus + label,.inputfile + label:hover { background-color: red; cursor: pointer; }
+div {display: inline-block; width: 40%; height: 80vh; float: left; margin: 30px;}
+pre {width: 100%; height: 100%; margin: 0; font-size: 12px;}
+textarea, code {width: 100%; height: 100%; margin: 0; overflow-y: auto; display: block; background-color: #333; font-size: 18px; box-sizing: border-box; padding: 5px; color: #093; border: 0; outline: none;}
