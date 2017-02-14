@@ -11,6 +11,8 @@ var SLRParser = function(grm) {
 	// Grammer Object
 	var grammer = new Grammer("S->S + T|T\nT->T * F|F\nF->( S )|id");
 
+	this.debug = grammer;
+
 	// Store original productions
 	var productions = {};
 	var stringProductions = [];
@@ -135,7 +137,7 @@ var SLRParser = function(grm) {
 		}
 	}
 
-	var start;
+	var start = null;
 
 	// Method to build LR Tree
 	var build = function() {
@@ -167,5 +169,10 @@ var SLRParser = function(grm) {
 
 	this.table = function() {
 		return self.slrTable;
+	}
+
+	this.parse = function(tokenlist) {
+		// parse the tokens to determine errors
+		
 	}
 };
